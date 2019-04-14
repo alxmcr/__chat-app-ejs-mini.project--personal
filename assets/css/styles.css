@@ -1,0 +1,193 @@
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+/*My CSS*/
+
+#sidebar-column-1 {
+	background-color: gray;
+}
+
+#sidebar-column-2 {
+	background-color: black;
+	display: none;
+}
+
+#channel-chat {
+	width: 100%;
+}
+
+#list-namespaces{
+	display: none;
+}
+
+.namespaces {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	height: 100vh;
+}
+
+.namespace-link {
+	display: block;
+	text-decoration: none;
+}
+
+.namespace-link:active,
+.namespace-link:link,
+.namespace-link:visited {
+	color: white;
+}
+
+.namespace-link:hover {
+	background-color: gold;
+	color: black;
+}
+
+.namespace-EnterNS,
+.channel-new {
+	background-color: #ffddaa;
+	display: none;
+	margin: 10px 0;
+	padding: 10px;
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.namespace-channel {
+    background-color: #dddddd;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+	padding: 10px;
+}
+
+.namespace-sidebar {
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.namespace-code,
+.namespace-host,
+.namespace-port {
+	width: 100%;
+}
+
+.channel-link {
+	display: block;
+	text-decoration: none;
+}
+
+.channel-link:active,
+.channel-link:link,
+.channel-link:visited {
+	color: white;
+}
+
+.channel-link:hover {
+	background-color: gold;
+	color: black;
+}
+
+.channel-messenger {
+	display: none;
+}
+
+.channel-title {
+	margin: 10px 0;
+}
+
+.namespace-selected {
+	background-color: black;
+}
+
+.channel-selected {
+	background-color: purple;
+}
+
+.sidebar-link {
+	background-color: gold;
+	border-radius: 10px;
+	display: block;
+	font-size: 1.5em;
+	margin: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.sidebar-link:active,
+.sidebar-link:link,
+.sidebar-link:visited {
+	color: black;
+}
+
+.sidebar-list {
+	list-style-position: inside;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.sidebar-title {
+	text-align: center;
+}
+
+
+/*Message*/
+.channel-message {
+    background-color: black;
+    border-radius: 10px;
+	align-items: flex-start;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.message-profile {
+	background-color: black;
+	color: white;
+    display: block;
+    width: 20%;
+}
+
+.message-infoMessage {
+    display: block;
+    width: 80%;
+}
+
+.message-username {
+    border-radius: 10px;
+    font-weight: bold;
+	margin-right: 10px;
+}
+
+.message-text {
+	margin-top: 10px;
+}
+
+.message-photo{
+    width: 4.5em;
+}
+
+.message-row {
+    margin-top: 10px;
+}

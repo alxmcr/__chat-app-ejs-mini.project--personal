@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <title>Namespaces and Rooms with Socket.io</title>
+    </head>
+    <body>
+        <!--NAMESPACES with many CHANNELS-->
+        <section class="namespaces">
+            <!--SIDEBAR-->
+            <aside class="namespace-sidebar">
+                <div class="sidebar-column" id="sidebar-column-1">
+                    <div class="session" id="session">
+                        <h3 class="sidebar-title" id="session-title">Login</h3>
+                        <form method="POST" class="session-formLogin" id="session-formLogin">
+                            <input type="text" name="session-username" id="session-username" class="session-username" placeholder="username" required><br>
+                            <input type="submit" value="Login" id="session-btnlogin" name="session-btnlogin">
+                        </form>
+                    </div>
+
+                    <div class="list-namespaces" id="list-namespaces">
+                        <h3 class="sidebar-title" id="namespaces-title">Namespaces</h3>
+                        <a href="#" class="sidebar-link" id="namespaces-btnAddNewConnection">Connect TO</a>
+                        <div class="namespace-EnterNS" id="namespace-EnterNS">
+                            <form method="POST" class="namespace-JoinForm" id="namespace-JoinForm">
+                                <input type="text" name="namespace-code" id="namespace-code" class="namespace-code" placeholder="Code (example-001)" required><br>
+                                <input type="submit" value="Connect" id="namespace-btnconnect" name="messenger-btnconnect">
+                            </form>
+                        </div>
+                        <ul class="sidebar-list" id="namespaces-list"></ul>
+                    </div>                   
+                </div>
+                <div class="sidebar-column" id="sidebar-column-2">
+                    <h3 class="sidebar-title" id="channels-title">Channels</h3>
+                    <a href="#" class="sidebar-link" id="channels-btnAddNewChannel">+</a>
+                    <div class="channel-new" id="channel-new">
+                        <form method="POST" class="channel-NewForm" id="channel-NewForm">
+                            <input type="text" name="channel-name" id="channel-name" class="channel-name" placeholder="Enter your channel" required><br>
+                            <input type="submit" value="Create" id="channel-btncreate" name="channel-btncreate">
+                        </form>
+                    </div>
+                    <ul class="sidebar-list" id="channels-list"></ul>
+                </div>
+            </aside>
+            <!-- CHANNELS-->
+            <div class="namespace-channel" id="channel">
+                <h1 class="channel-title" id="channel-title"></h1>
+                <!-- Error Messages -->
+                <div class="channel-errors" id="channel-errors"></div>
+                <!--Chat-->
+                <div class="chat" id="chat">
+                    <div class="channel-chat" id="channel-chat"></div>
+                    <!--Messenger-->
+                    <div class="channel-messenger" id="messenger">
+                        <form method="POST" class="messenger-form" id="messenger-form">
+                            <textarea name="messenger-text" id="messenger-text" class="messenger-text" cols="30" rows="10"></textarea><br>
+                            <input type="submit" value="Send" id="messenger-btnsend" name="messenger-btnsend">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Socket.io-->
+        <script src="http://127.0.0.1:9090/socket.io/socket.io.js"></script>
+        <!--My JS Script-->
+        <script src="/assets/js/client.js"></script>
+    </body>
+</html>
